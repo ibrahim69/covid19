@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/scss/style.scss'
 
 
 import store from './stores/config'

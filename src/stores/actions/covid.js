@@ -45,7 +45,6 @@ export const getData = function(value) {
     return async dispatch => {
         try {
             let data = await covid.getData(value)
-            console.log('[data country]  ===== >', data)
             dispatch(setCovidData(data))
             return Promise.resolve()
         } catch(err) {

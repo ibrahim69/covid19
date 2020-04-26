@@ -1,10 +1,9 @@
-import axios from '../axios';
+import axios from '../axios'
 
 export default {
     async getCountries() {
         try {
-            let data = await axios.$get('/countries')
-            return data
+            return await axios.$get('/countries')
         } catch(e) {
             return Promise.reject(e)
         }
@@ -12,9 +11,7 @@ export default {
 
     async getData(slug) {
         try {
-            let data = await axios.$get(`/live/country/${slug}`)
-            // console.log('[data country]  ===== >', data) // undefined
-            return data
+            return await axios.$get(`live/country/${slug}`)
         } catch(e) {
             return Promise.reject(e)
         }
